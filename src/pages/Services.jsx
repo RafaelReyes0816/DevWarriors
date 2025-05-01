@@ -1,73 +1,173 @@
-import { Card, Badge } from "flowbite-react";
-import { FaCode, FaPalette, FaMobile, FaServer, FaChartLine, FaShieldAlt } from "react-icons/fa";
+import { Card, Badge, Button } from "flowbite-react";
+import { 
+  FaCode, FaPalette, FaMobile, 
+  FaServer, FaChartLine, FaShieldAlt,
+  FaArrowRight, FaLaptopCode, FaDatabase
+} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export default function Services() {
-  const services = [
+  const serviceCategories = [
     {
       title: "Desarrollo Web",
-      description: "Sitios web a medida con React, optimizados para SEO y rendimiento.",
-      icon: <FaCode className="text-4xl mb-4 text-blue-600" />,
-      badge: "Popular"
+      description: "Creamos experiencias digitales rápidas, accesibles y centradas en el usuario.",
+      icon: <FaLaptopCode className="text-4xl mb-4 text-blue-600 dark:text-blue-400" />,
+      features: [
+        "Aplicaciones con React/Next.js",
+        "Optimización SEO",
+        "Arquitectura modular",
+        "Integración con CMS"
+      ],
+      badge: "Más Popular",
+      color: "blue"
     },
     {
       title: "Diseño UI/UX",
-      description: "Interfaces intuitivas y atractivas que mejoran la experiencia de usuario.",
-      icon: <FaPalette className="text-4xl mb-4 text-purple-600" />
+      description: "Interfaces que deleitan a los usuarios y cumplen objetivos de negocio.",
+      icon: <FaPalette className="text-4xl mb-4 text-purple-600 dark:text-purple-400" />,
+      features: [
+        "Prototipado interactivo",
+        "Pruebas de usabilidad",
+        "Sistemas de diseño",
+        "Accesibilidad WCAG"
+      ],
+      color: "purple"
     },
     {
-      title: "Apps Móviles",
-      description: "Aplicaciones iOS y Android con React Native o Flutter.",
-      icon: <FaMobile className="text-4xl mb-4 text-green-600" />
+      title: "Mobile Apps",
+      description: "Aplicaciones nativas e híbridas con excelente rendimiento.",
+      icon: <FaMobile className="text-4xl mb-4 text-green-600 dark:text-green-400" />,
+      features: [
+        "React Native/Flutter",
+        "Publicación en stores",
+        "Notificaciones push",
+        "Offline-first"
+      ],
+      badge: "Tendencia",
+      color: "green"
     },
     {
-      title: "Backend",
-      description: "APIs robustas con Node.js, Django o Laravel.",
-      icon: <FaServer className="text-4xl mb-4 text-amber-600" />
+      title: "Backend & API",
+      description: "Infraestructura escalable para soportar tu crecimiento.",
+      icon: <FaServer className="text-4xl mb-4 text-amber-600 dark:text-amber-400" />,
+      features: [
+        "Node.js / Python / .NET",
+        "Microservicios",
+        "GraphQL/REST",
+        "Autenticación JWT"
+      ],
+      color: "amber"
     },
     {
-      title: "Analítica",
-      description: "Tableros con métricas en tiempo real usando Power BI o Tableau.",
-      icon: <FaChartLine className="text-4xl mb-4 text-red-600" />
+      title: "Business Intelligence",
+      description: "Transformamos tus datos en insights accionables.",
+      icon: <FaChartLine className="text-4xl mb-4 text-red-600 dark:text-red-400" />,
+      features: [
+        "Power BI/Tableau",
+        "ETL y Data Warehousing",
+        "Dashboards ejecutivos",
+        "Predictive Analytics"
+      ],
+      color: "red"
     },
     {
-      title: "Cyberseguridad",
-      description: "Protección de datos y auditorías de seguridad.",
-      icon: <FaShieldAlt className="text-4xl mb-4 text-indigo-600" />
+      title: "Seguridad",
+      description: "Protegemos tus activos digitales y cumplimos regulaciones.",
+      icon: <FaShieldAlt className="text-4xl mb-4 text-indigo-600 dark:text-indigo-400" />,
+      features: [
+        "Auditorías de seguridad",
+        "Protección de datos",
+        "Pentesting",
+        "GDPR/CCPA"
+      ],
+      badge: "Esencial",
+      color: "indigo"
     }
   ];
 
   return (
-    <section className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-          Nuestros Servicios
-        </h2>
-        <p className="text-xl text-center mb-12 text-gray-600 dark:text-gray-300">
-          Soluciones tecnológicas para impulsar tu negocio
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card 
-              key={index}
-              className="h-full transition-all hover:shadow-lg dark:hover:bg-gray-800"
-            >
-              <div className="text-center">
-                {service.icon}
-                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                {service.badge && (
-                  <Badge color="info" className="w-fit mx-auto mb-3">
-                    {service.badge}
-                  </Badge>
-                )}
-                <p className="text-gray-600 dark:text-gray-400">
-                  {service.description}
-                </p>
-              </div>
-            </Card>
-          ))}
+    <main className="bg-white dark:bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Nuestros <span className="text-blue-600 dark:text-blue-400">Servicios</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            Soluciones tecnológicas completas para impulsar tu negocio digital
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((service, index) => (
+              <Card 
+                key={index}
+                className={`border-0 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-l-4 border-${service.color}-500 dark:border-${service.color}-400`}
+              >
+                <div className="text-center">
+                  <div className="flex justify-center">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    {service.title}
+                  </h3>
+                  {service.badge && (
+                    <Badge 
+                      color={service.color} 
+                      className={`w-fit mx-auto mb-3 bg-${service.color}-100 dark:bg-${service.color}-900 text-${service.color}-800 dark:text-${service.color}-200`}
+                    >
+                      {service.badge}
+                    </Badge>
+                  )}
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="text-left mb-6 space-y-2">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className={`text-${service.color}-500 dark:text-${service.color}-400 mr-2`}>•</span>
+                        <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link to="/contact" className="inline-block">
+                    <Button 
+                      gradientDuoTone={`${service.color}ToBlue`}
+                      size="sm"
+                      className="mt-auto"
+                    >
+                      Saber más <FaArrowRight className="ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            ¿No encuentras lo que necesitas?
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Desarrollamos soluciones personalizadas para tus requerimientos específicos
+          </p>
+          <Link to="/contact">
+            <Button gradientDuoTone="purpleToBlue" size="lg" className="px-8">
+              Habla con nuestros expertos
+            </Button>
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

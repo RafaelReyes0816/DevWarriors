@@ -1,5 +1,5 @@
-import { Card } from "flowbite-react";
-import { FaLightbulb, FaHandshake, FaChartLine } from "react-icons/fa";
+import { Card, Button } from "flowbite-react";
+import { FaLightbulb, FaHandshake, FaChartLine, FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 export default function About() {
@@ -7,123 +7,177 @@ export default function About() {
     {
       name: "Rafael Reyes",
       position: "Fundador y Desarrollador Full Stack",
-      description: "Apasionado por la tecnología y la innovación.",
+      description: "Apasionado por la tecnología y la innovación con más de 5 años de experiencia en desarrollo web.",
       imgSrc: "/image/team/perfil.png",
+      social: {
+        linkedin: "#",
+        github: "#"
+      }
     },
     {
       name: "David Cruz",
       position: "Desarrollador Full Stack",
-      description: "Enfocado en soluciones escalables y eficientes.",
+      description: "Especialista en arquitecturas escalables y optimización de rendimiento.",
       imgSrc: "/image/team/perfil.png",
+      social: {
+        linkedin: "#",
+        github: "#"
+      }
     },
     {
       name: "José Gonzales",
-      position: "Desarrollador Full Stack",
-      description: "Especialista en backend y APIs REST.",
+      position: "Desarrollador Backend",
+      description: "Experto en diseño de APIs REST y microservicios.",
       imgSrc: "/image/team/perfil.png",
+      social: {
+        linkedin: "#",
+        github: "#"
+      }
     },
     {
       name: "Iván Orellana",
-      position: "Diseño UX/UI y Community Manager",
-      description: "Diseñando experiencias memorables para los usuarios.",
+      position: "Diseñador UX/UI",
+      description: "Creador de experiencias de usuario intuitivas y atractivas.",
       imgSrc: "/image/team/perfil.png",
+      social: {
+        linkedin: "#",
+        github: "#"
+      }
     }
   ];
 
   const companyValues = [
     {
       title: "Innovación",
-      description: "Pioneros en adoptar y crear tecnologías disruptivas.",
-      icon: <FaLightbulb className="text-3xl text-blue-600 mb-3" />,
+      description: "Adoptamos tecnologías emergentes para ofrecer soluciones vanguardistas.",
+      icon: <FaLightbulb className="text-4xl text-blue-600 dark:text-blue-400 mb-4" />,
     },
     {
       title: "Transparencia",
-      description: "Comunicación clara en todos nuestros procesos.",
-      icon: <FaHandshake className="text-3xl text-blue-600 mb-3" />,
+      description: "Practicamos comunicación abierta en cada etapa de nuestros proyectos.",
+      icon: <FaHandshake className="text-4xl text-blue-600 dark:text-blue-400 mb-4" />,
     },
     {
       title: "Crecimiento",
-      description: "Mejora continua personal y profesional.",
-      icon: <FaChartLine className="text-3xl text-blue-600 mb-3" />,
+      description: "Nos actualizamos constantemente para superar las expectativas.",
+      icon: <FaChartLine className="text-4xl text-blue-600 dark:text-blue-400 mb-4" />,
     }
   ];
 
   return (
-    <main className="min-h-screen p-4 md:p-8 bg-gray-50 dark:bg-gray-900">
-      {/* Hero */}
-      <header className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
-          Nuestra Historia
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Desde 2024 transformando ideas en soluciones tecnológicas de alto impacto
-        </p>
-      </header>
+    <main className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Nuestra <span className="text-blue-600">Historia</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Desde 2024, transformando ideas en soluciones tecnológicas que impulsan negocios
+          </p>
+        </div>
+      </section>
 
-      {/* Equipo */}
-      <section className="mb-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
-          Conoce al <span className="text-blue-600">Equipo</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 text-center p-6">
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 border-4 border-blue-100 dark:border-gray-700">
-                  <img
-                    src={member.imgSrc}
-                    alt={`Foto de ${member.name}`}
-                    className="w-full h-full object-cover"
-                  />
+      {/* Team Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Conoce al <span className="text-blue-600">Equipo</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Un equipo multidisciplinario comprometido con la excelencia
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card 
+                key={index} 
+                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center p-6 border-0"
+              >
+                <div className="flex flex-col items-center">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-blue-100 dark:border-gray-700">
+                    <img
+                      src={member.imgSrc}
+                      alt={`${member.name} - ${member.position}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">
+                    {member.position}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {member.description}
+                  </p>
+                  <div className="flex space-x-4">
+                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn de ${member.name}`}>
+                      <FaLinkedin className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-400 text-xl" />
+                    </a>
+                    <a href={member.social.github} target="_blank" rel="noopener noreferrer" aria-label={`GitHub de ${member.name}`}>
+                      <FaGithub className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xl" />
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
-                  {member.name}
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Nuestros <span className="text-blue-600">Valores</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Principios que guían cada decisión que tomamos
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {companyValues.map((value, index) => (
+              <Card 
+                key={index} 
+                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center p-8 border-0 bg-white dark:bg-gray-700"
+              >
+                <div className="flex justify-center mb-4">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {value.title}
                 </h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
-                  {member.position}
+                <p className="text-gray-600 dark:text-gray-300">
+                  {value.description}
                 </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                  {member.description}
-                </p>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Valores */}
-      <section className="mb-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
-          Nuestros <span className="text-blue-600">Valores</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {companyValues.map((value, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 text-center p-6">
-              <div className="flex justify-center mb-3">
-                {value.icon}
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">
-                {value.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                {value.description}
-              </p>
-            </Card>
-          ))}
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600 dark:bg-blue-800">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            ¿Listo para comenzar tu proyecto?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contáctanos hoy mismo y descubre cómo podemos ayudarte a alcanzar tus objetivos
+          </p>
+          <Link to="/contact">
+            <Button gradientDuoTone="cyanToBlue" size="xl" className="px-8 py-4 text-lg">
+              Contáctanos
+            </Button>
+          </Link>
         </div>
       </section>
-
-      {/* Llamado a la acción */}
-      <footer className="text-center mt-16">
-        <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white">
-          ¿Listo para trabajar con nosotros?
-        </h3>
-        <Link to="/Contact" className="inline-block">
-          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-base md:text-lg">
-            Contáctanos
-          </button>
-        </Link>
-      </footer>
     </main>
   );
 }
