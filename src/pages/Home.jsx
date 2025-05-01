@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   // Imágenes del carrusel (corregidas las rutas)
   const carouselImages = [
-    "/image/carousel/soluciones.jpeg",  // Sin 'public/' en la ruta
-    "/image/carousel/soluciones03.jpeg",
-    "https://source.unsplash.com/random/1600x900/?technology"
+    "/image/carousel/banner01.png",
+    "/image/carousel/banner2.png",
+    "/image/carousel/banner03.png",
   ];
 
   // Servicios destacados
@@ -21,12 +21,14 @@ export default function Home() {
     {
       title: "Aplicaciones Móviles",
       description: "Apps nativas e híbridas para iOS y Android.",
-      icon: <FaMobileAlt className="text-4xl text-green-600" />
+      icon: <FaMobileAlt className="text-4xl text-green-600" />,
+      badge: "Nuevo"
     },
     {
       title: "Seguridad Informática",
       description: "Protección de datos y sistemas contra amenazas digitales.",
-      icon: <FaShieldAlt className="text-4xl text-red-600" />
+      icon: <FaShieldAlt className="text-4xl text-red-600" />,
+      badge: "Recomendado"
     }
   ];
 
@@ -49,7 +51,7 @@ export default function Home() {
                   e.currentTarget.src = 'https://via.placeholder.com/1600x900';
                 }}
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     
