@@ -8,40 +8,40 @@ export default function About() {
       name: "Rafael Reyes",
       position: "Fundador y Desarrollador Full Stack",
       description: "Apasionado por la tecnología y la innovación con más de 5 años de experiencia en desarrollo web.",
-      imgSrc: "/image/team/perfil.png",
+      imgSrc: "/image/team/JR.png",
       social: {
-        linkedin: "#",
-        github: "#"
+        linkedin: "https://bo.linkedin.com/",
+        github: "https://github.com/"
       }
     },
     {
       name: "David Cruz",
       position: "Desarrollador Full Stack",
       description: "Especialista en arquitecturas escalables y optimización de rendimiento.",
-      imgSrc: "/image/team/perfil.png",
+      imgSrc: "/image/team/DC.png",
       social: {
-        linkedin: "#",
-        github: "#"
+        linkedin: "https://bo.linkedin.com/",
+        github: "https://github.com/"
       }
     },
     {
       name: "José Gonzales",
       position: "Desarrollador Backend",
       description: "Experto en diseño de APIs REST y microservicios.",
-      imgSrc: "/image/team/perfil.png",
+      imgSrc: "/image/team/JG.png",
       social: {
-        linkedin: "#",
-        github: "#"
+        linkedin: "https://bo.linkedin.com/",
+        github: "https://github.com/"
       }
     },
     {
       name: "Iván Orellana",
       position: "Diseñador UX/UI",
       description: "Creador de experiencias de usuario intuitivas y atractivas.",
-      imgSrc: "/image/team/perfil.png",
+      imgSrc: "/image/team/IO.png",
       social: {
-        linkedin: "#",
-        github: "#"
+        linkedin: "https://bo.linkedin.com/",
+        github: "https://github.com/"
       }
     }
   ];
@@ -164,18 +164,24 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 dark:bg-blue-800">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            ¿Listo para comenzar tu proyecto?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contáctanos hoy mismo y descubre cómo podemos ayudarte a alcanzar tus objetivos
-          </p>
-          <Link to="/contact">
-            <Button gradientDuoTone="cyanToBlue" size="xl" className="px-8 py-4 text-lg">
-              Contáctanos
-            </Button>
-          </Link>
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              ¿Listo para comenzar tu proyecto?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Contáctanos hoy mismo y descubre cómo podemos ayudarte a alcanzar tus objetivos
+            </p>
+            <Link to="/contact" className="w-full md:w-auto">
+              <Button 
+                gradientDuoTone="cyanToBlue" 
+                size="xl" 
+                className="px-8 py-4 text-lg w-full md:w-auto"
+              >
+                Contáctanos
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

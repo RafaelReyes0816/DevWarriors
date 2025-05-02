@@ -33,7 +33,7 @@ export default function LegalPage() {
           </ul>
         </div>
 
-        {/* Sección 3 - Privacidad (RGPD adaptado a servicios web) */}
+        {/* Sección 3 - Privacidad */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow mb-6">
           <h2 className="text-xl font-semibold mb-3 dark:text-white">3. Política de Privacidad</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -46,7 +46,7 @@ export default function LegalPage() {
           </ul>
         </div>
 
-        {/* Sección 4 - Cookies (técnicas para devs) */}
+        {/* Sección 4 - Cookies */}
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
           <h2 className="text-xl font-semibold mb-3 dark:text-white">4. Política de Cookies</h2>
           <p className="text-gray-700 dark:text-gray-300">
@@ -54,7 +54,7 @@ export default function LegalPage() {
           </p>
         </div>
 
-        {/* Botón de contacto (opcional) */}
+        {/* Botón de contacto */}
         <div className="mt-8 text-center">
           <a 
             href="mailto:info@devwarriors.com" 

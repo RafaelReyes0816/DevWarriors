@@ -179,7 +179,7 @@ export default function Contact() {
               </h2>
               
               <div className="space-y-4">
-                {/* Email - Versión alineada */}
+                {/* Email */}
                 <div 
                   className="flex items-start p-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                   onClick={() => window.location.href = 'mailto:tj.juan.reyes.b@upds.net.bo'}
@@ -196,7 +196,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* WhatsApp - Versión alineada */}
+                {/* WhatsApp */}
                 <div 
                   className="flex items-start p-3 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                   onClick={() => window.open('https://wa.me/59179288555', '_blank')}
@@ -245,8 +245,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">Ubicación</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                      Santa Cruz de la Sierra, Bolivia<br />
-                      Av. San Martín #1234
+                      Tarija, Bolivia<br />
+                      15 de Abril #2341
                     </p>
                   </div>
                 </div>

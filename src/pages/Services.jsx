@@ -154,18 +154,24 @@ export default function Services() {
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            ¿No encuentras lo que necesitas?
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Desarrollamos soluciones personalizadas para tus requerimientos específicos
-          </p>
-          <Link to="/contact">
-            <Button gradientDuoTone="purpleToBlue" size="lg" className="px-8">
-              Habla con nuestros expertos
-            </Button>
-          </Link>
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              ¿No encuentras lo que necesitas?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Desarrollamos soluciones personalizadas para tus requerimientos específicos
+            </p>
+            <Link to="/contact" className="w-full md:w-auto">
+              <Button 
+                gradientDuoTone="purpleToBlue" 
+                size="lg" 
+                className="px-8 w-full md:w-auto"
+              >
+                Habla con nuestros expertos
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

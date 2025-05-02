@@ -17,7 +17,7 @@ export default function Header() {
             loading="lazy"
           />
           <span className="self-center text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white">
-          
+                
           </span>
         </NavbarBrand>
 
