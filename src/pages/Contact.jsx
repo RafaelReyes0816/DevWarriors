@@ -191,7 +191,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 dark:text-white">Correo electrónico</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">tj.juan.reyes.b@upds.net.bo</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1"></p>
                     <span className="text-xs text-blue-500 dark:text-blue-300 mt-1 block">Respuesta en 24h</span>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp Business</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">+591 79288555</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1"></p>
                     <div className="flex items-center mt-1">
                       <span className="text-xs text-green-500 dark:text-green-300 mr-2">Respuesta inmediata</span>
                       <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full animate-pulse">En línea</span>
