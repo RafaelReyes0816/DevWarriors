@@ -57,30 +57,7 @@ export default function Header() {
             >
               Contacto
             </NavbarLink>
-            
-            <div className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <Button 
-                as={Link} 
-                to="/contact" 
-                gradientDuoTone="purpleToBlue"
-                className="w-full"
-              >
-                Contactar
-              </Button>
-            </div>
           </NavbarCollapse>
-
-          <div className="hidden md:block">
-            <Button 
-              as={Link} 
-              to="/contact" 
-              gradientDuoTone="purpleToBlue"
-              size="sm"
-              className="ml-4"
-            >
-              Contactar
-            </Button>
-          </div>
         </div>
       </div>
     </Navbar>
