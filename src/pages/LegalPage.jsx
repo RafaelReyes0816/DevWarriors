@@ -57,7 +57,7 @@ export default function LegalPage() {
         {/* Botón de contacto */}
         <div className="mt-8 text-center">
           <a 
-            href="mailto:info@devwarriors.com" 
+            href="mailto:tj.juan.reyes.b@upds.net.bo" 
             className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Contactar al DPO
