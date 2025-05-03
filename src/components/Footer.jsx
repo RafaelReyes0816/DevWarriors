@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Pie inferior */}
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <FooterCopyright 
-            href="#" 
+            href="/" 
             by="DevWarriors™" 
             year={2025}
             className="text-gray-600 dark:text-gray-300"
@@ -84,18 +84,21 @@ export default function Footer() {
           <div className="mt-4 flex space-x-6 sm:mt-0">
             <FooterIcon 
               href="https://instagram.com"
+              target="_blank"
               icon={BsInstagram}
               className="text-gray-600 hover:text-pink-600 dark:text-gray-300 dark:hover:text-pink-400"
               aria-label="Instagram"
             />
             <FooterIcon 
               href="https://github.com"
+              target="_blank"
               icon={BsGithub}
               className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               aria-label="GitHub"
             />
             <FooterIcon 
               href="https://tiktok.com"
+              target="_blank"
               icon={BsTiktok}
               className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
               aria-label="TikTok"

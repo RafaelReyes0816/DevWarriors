@@ -207,7 +207,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp Business</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1"></p>
                     <div className="flex items-center mt-1">
                       <span className="text-xs text-green-500 dark:text-green-300 mr-2">Respuesta inmediata</span>
@@ -220,10 +220,6 @@ export default function Contact() {
 
             {/* Información adicional */}
             <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                Información adicional
-              </h3>
-              
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900/30 mr-4">
