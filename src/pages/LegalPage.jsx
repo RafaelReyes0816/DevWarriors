@@ -14,16 +14,19 @@ export default function LegalPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        {/* Título con badge de importancia */}
+        {/* Título con badge ajustado */}
         <div className="text-center mb-8">
-          <Badge color="blue" className="mb-4">
+          <Badge 
+            color="blue" 
+            className="mb-2 text-xs md:text-sm py-1 px-2 inline-flex items-center"
+          >
             Documento Legal
           </Badge>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Aviso Legal y Términos de Servicio
           </h1>
           <p className="text-gray-500 dark:text-gray-400 mt-2">
-          Última actualización: 25 de Abril de 2025
+            Última actualización: 25 de Abril de 2025
           </p>
         </div>
 
