@@ -34,51 +34,51 @@ export default function Services() {
       color: "purple"
     },
     {
-      title: "Mobile Apps",
+      title: "Desarrollo Móvil",
       description: "Aplicaciones nativas e híbridas con excelente rendimiento.",
       icon: <FaMobile className="text-4xl mb-4 text-green-600 dark:text-green-400" />,
       features: [
         "React Native/Flutter",
         "Publicación en stores",
         "Notificaciones push",
-        "Offline-first"
+        "Funcionamiento offline"
       ],
       badge: "Tendencia",
       color: "green"
     },
     {
-      title: "Backend & API",
+      title: "Desarrollo Backend",
       description: "Infraestructura escalable para soportar tu crecimiento.",
       icon: <FaServer className="text-4xl mb-4 text-amber-600 dark:text-amber-400" />,
       features: [
         "Node.js / Python / .NET",
-        "Microservicios",
-        "GraphQL/REST",
+        "Arquitectura de microservicios",
+        "APIs GraphQL/REST",
         "Autenticación JWT"
       ],
       color: "amber"
     },
     {
-      title: "Business Intelligence",
+      title: "Inteligencia de Negocios (BI)",
       description: "Transformamos tus datos en insights accionables.",
       icon: <FaChartLine className="text-4xl mb-4 text-red-600 dark:text-red-400" />,
       features: [
         "Power BI/Tableau",
-        "ETL y Data Warehousing",
+        "ETL y almacenamiento de datos",
         "Dashboards ejecutivos",
-        "Predictive Analytics"
+        "Análisis predictivo"
       ],
       color: "red"
     },
     {
-      title: "Seguridad",
+      title: "Ciberseguridad",
       description: "Protegemos tus activos digitales y cumplimos regulaciones.",
       icon: <FaShieldAlt className="text-4xl mb-4 text-indigo-600 dark:text-indigo-400" />,
       features: [
         "Auditorías de seguridad",
         "Protección de datos",
-        "Pentesting",
-        "GDPR/CCPA"
+        "Pruebas de penetración",
+        "Cumplimiento GDPR/CCPA"
       ],
       badge: "Esencial",
       color: "indigo"
