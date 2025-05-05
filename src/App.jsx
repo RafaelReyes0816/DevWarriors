@@ -7,14 +7,14 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import LegalPage from './pages/LegalPage';
 
-// Componente para scroll suave
+
 function SmoothScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // ¡Aquí está la animación!
+      behavior: 'smooth'
     });
   }, [pathname]);
 
