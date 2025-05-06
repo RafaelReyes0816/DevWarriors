@@ -1,6 +1,6 @@
 import { Card, Badge, Button } from "flowbite-react";
-import { 
-  FaCode, FaPalette, FaMobile, 
+import {
+  FaCode, FaPalette, FaMobile,
   FaServer, FaChartLine, FaShieldAlt,
   FaArrowRight, FaLaptopCode, FaDatabase
 } from "react-icons/fa";
@@ -10,6 +10,7 @@ export default function Services() {
   const serviceCategories = [
     {
       title: "Desarrollo Web",
+      filterKey: "web", // ✅ Coincide con category en BD
       description: "Creamos experiencias digitales rápidas, accesibles y centradas en el usuario.",
       icon: <FaLaptopCode className="text-4xl mb-4 text-blue-600 dark:text-blue-400" />,
       features: [
@@ -23,6 +24,7 @@ export default function Services() {
     },
     {
       title: "Diseño UI/UX",
+      filterKey: "uiux", // ✅
       description: "Interfaces que deleitan a los usuarios y cumplen objetivos de negocio.",
       icon: <FaPalette className="text-4xl mb-4 text-purple-600 dark:text-purple-400" />,
       features: [
@@ -35,6 +37,7 @@ export default function Services() {
     },
     {
       title: "Desarrollo Móvil",
+      filterKey: "mobile", // ✅ Este es el valor clave
       description: "Aplicaciones nativas e híbridas con excelente rendimiento.",
       icon: <FaMobile className="text-4xl mb-4 text-green-600 dark:text-green-400" />,
       features: [
@@ -48,6 +51,7 @@ export default function Services() {
     },
     {
       title: "Desarrollo Backend",
+      filterKey: "backend", // ✅
       description: "Infraestructura escalable para soportar tu crecimiento.",
       icon: <FaServer className="text-4xl mb-4 text-amber-600 dark:text-amber-400" />,
       features: [
@@ -60,6 +64,7 @@ export default function Services() {
     },
     {
       title: "Inteligencia de Negocios (BI)",
+      filterKey: "bi", // ✅ Más limpio que el título largo
       description: "Transformamos tus datos en insights accionables.",
       icon: <FaChartLine className="text-4xl mb-4 text-red-600 dark:text-red-400" />,
       features: [
@@ -72,6 +77,7 @@ export default function Services() {
     },
     {
       title: "Ciberseguridad",
+      filterKey: "ciberseguridad", // ✅ Puedes usar este o cambiar a "security"
       description: "Protegemos tus activos digitales y cumplimos regulaciones.",
       icon: <FaShieldAlt className="text-4xl mb-4 text-indigo-600 dark:text-indigo-400" />,
       features: [
@@ -104,7 +110,7 @@ export default function Services() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((service, index) => (
-              <Card 
+              <Card
                 key={index}
                 className={`border-0 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-l-4 border-${service.color}-500 dark:border-${service.color}-400`}
               >
@@ -116,8 +122,8 @@ export default function Services() {
                     {service.title}
                   </h3>
                   {service.badge && (
-                    <Badge 
-                      color={service.color} 
+                    <Badge
+                      color={service.color}
                       className={`w-fit mx-auto mb-3 bg-${service.color}-100 dark:bg-${service.color}-900 text-${service.color}-800 dark:text-${service.color}-200`}
                     >
                       {service.badge}
@@ -126,7 +132,7 @@ export default function Services() {
                   <p className="text-gray-600 dark:text-gray-400 mb-4">
                     {service.description}
                   </p>
-                  
+
                   <ul className="text-left mb-6 space-y-2">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start">
@@ -135,14 +141,18 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link to="/contact" className="inline-block">
-                    <Button 
+
+                  {/* Botón dinámico según filterKey */}
+                  <Link
+                    to={`/projects?service=${service.filterKey}`}
+                    className="inline-block"
+                  >
+                    <Button
                       gradientDuoTone={`${service.color}ToBlue`}
                       size="sm"
                       className="mt-auto"
                     >
-                      Saber más <FaArrowRight className="ml-2" />
+                      Ver Proyectos <FaArrowRight className="ml-2" />
                     </Button>
                   </Link>
                 </div>
@@ -163,11 +173,7 @@ export default function Services() {
               Desarrollamos soluciones personalizadas para tus requerimientos específicos
             </p>
             <Link to="/contact" className="w-full md:w-auto">
-              <Button 
-                gradientDuoTone="purpleToBlue" 
-                size="lg" 
-                className="px-8 w-full md:w-auto"
-              >
+              <Button gradientDuoTone="purpleToBlue" size="lg" className="px-8 w-full md:w-auto">
                 Habla con nuestros expertos
               </Button>
             </Link>
